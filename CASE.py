@@ -20,7 +20,7 @@ def get_numhexagons():
 
 def get_color_choice():
 
-    new_color = input('Пожалуйста, введите цвет: ').lower().strip()
+    new_color = input('Пожалуйста, введите цвет: ').lower()
     while True:
         if new_color == 'красный':
             choice = 'red'
