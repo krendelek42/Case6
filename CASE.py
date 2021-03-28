@@ -7,10 +7,11 @@ import turtle as t
 
 def get_numhexagons():
 
-    num = int(input('Пожалуйста, введите количество шестиугольников, располагаемых в ряд: '))
+    num = input('Пожалуйста, введите количество шестиугольников, располагаемых в ряд: ')
     while True:
         try:
-            if num >= 4 and num <= 20:
+            num = int(num)
+            if num>= 4 and num <= 20:
                 return num
             else:
                 num = int(input('Оно должно быть от 4 до 20. Пожалуйста, повторите попытку: '))
