@@ -1,6 +1,6 @@
 """Case-study Тесселяция
 Разработчики:
-Докукина К.А., Назирова Е.С.
+Докукина К.А. 60%, Назирова Е.С. 40%
 
 """
 import turtle as t
@@ -91,7 +91,5 @@ for i in range(num):
         index = color_index + 1
     x += (-1) ** (i+1)*(diameter/2)
     y -= (3/2 * side_len)
-t.isvisible()
-t.done()
 
 t.mainloop()
