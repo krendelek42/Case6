@@ -64,3 +64,34 @@ def draw_hexagon(x, y, side_len, color):
     t.left(30)
     t.up()
 
+colors = ['красный', 'синий', 'зеленый', 'желтый', 'оранжевый', 'пурпурный', 'розовый']
+print('Допустимые цвета заливки:')
+for i in colors:
+    print(' '+i)
+color_1 = get_color_choice()
+color_2 = get_color_choice()
+num = get_numhexagons()
+diameter = 1000/(2*num + 1)
+side_len = diameter / (3**(0.5))
+x = -250 + diameter/2
+y = 250
+
+t.setup(500,500)
+t.speed(1000)
+colors = [color_1, color_2]
+index = 0
+for i in range(num):
+    for j in range(num):
+        color_index = (index+j)%2
+        draw_hexagon(x,y,side_len,colors[color_index])
+        x += (-1)**(i%2)* diameter
+    if i %2 == 0:
+        index = color_index
+    else:
+        index = color_index + 1
+    x += (-1) ** (i+1)*(diameter/2)
+    y -= (3/2 * side_len)
+t.isvisible()
+t.done()
+
+t.mainloop()
